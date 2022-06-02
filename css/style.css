@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+header {
+    height: 70px;
+
+}
+header h1{
+    display: inline-block;
+    float: left;
+    padding: 11px 24px;
+    text-transform: uppercase;
+}
+header h1 a{
+    transition: .3s; 
+}
+header h1 a :hover {
+    color: blueviolet;
+}
+header ul{
+    float: right;
+}
+header ul li{
+    padding: 21px;
+    display: inline-block;
+}
+header ul li a{
+    transition: .3s;
+}
+header ul li a:hover {
+    color: blueviolet;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.container::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 18px;
+}
+
+.mobile-menu:hover{
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, .9);
+    transition: .3s;
+}
+
+.sidebar ul li a {
+    color:black;
+}
+
+.sidebar ul li {
+    padding: 24px;
+}
+.sidebar ul li:hover{
+    background-color: #B3B6B7;
+    transition: .3s;
+    transition-property: background-color;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+.banner {
+    background-color: black;
+    padding: 100px 0;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.banner img {
+    width: 200px;
+    border-radius: 150px;
+    margin-bottom: 10px;
+}
+
+.banner h2,
+.banner p,
+.banner span {
+    color: white;
+}
+
+.banner h2{
+    margin-bottom: 10px;
+}
+
+.banner p{
+    font-size: 15px;
+}
+.banner-left{
+    padding-left: 24px;
+
+}
+
+section h3 {
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+section h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    background-color: #ddd;
+    left: calc(50% - 60px);
+}
+#about p {
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+#latest-video p{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#my-music p{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#my-photos p{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#my-photos img {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#social-media p{
+    text-align: center;
+    margin-bottom: 15px;
+}
+/* Style all font awesome icons */
+.fa-brands {
+
+    top: 50%;
+    left: 27%;
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    font-size: 40px;
+    width: 100px;
+}
+
+  /* Add a hover effect if you want */
+.fa-brands:hover {
+    opacity: 0.7;
+  }
+
+footer {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+}
+footer p {
+    margin-bottom: 15px;
+    color: white;
+}
+footer small {
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+@media (max-width: 768px){
+    .mobile-menu{
+        display: block  ;
+    }
+
+    header ul {
+        display: none;
+    }
+
+}
